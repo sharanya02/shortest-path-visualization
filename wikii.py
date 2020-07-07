@@ -8,7 +8,7 @@ wiki = wikipediaapi.Wikipedia('en')
 def sm_graph(page):
     links = page.links
     for title in sorted(links.keys()):
-        G.add_node(title, size=20, title='couple')
+        G.add_node(title, size=20, title=(wiki.page(title)).summary[0:60])
         G.add_edge(page.title, title, weight=1)
         link1= wiki.page(title).links
         for t in sorted(link1.keys()):
