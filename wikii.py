@@ -22,8 +22,8 @@ k = nx.shortest_path(G1, start_page, end_page, weight='weight')
 print(k)
 for g in G.nodes:
     if g in k:
-        G.node[g]['color']="blue"
-        G.node[g]['size']= 30
+        G.nodes[g]['color']="blue"
+        G.nodes[g]['size']= 30
 for i in range(0,len(k)-1):
     G[k[i]][k[i+1]]['color'] = "red"
     nt = Network("500px", "500px")
