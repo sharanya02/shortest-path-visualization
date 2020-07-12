@@ -26,6 +26,6 @@ for g in G.nodes:
         G.nodes[g]['size']= 30
 for i in range(0,len(k)-1):
     G[k[i]][k[i+1]]['color'] = "red"
-    nt = Network("1000px", "500px")
+    nt = Network("1000px", "1000px")
 nt.from_nx(G1)
 nt.show("nx.html")
